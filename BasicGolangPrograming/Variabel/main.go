@@ -56,6 +56,6 @@ func main() {
 
 	//another exampel
 
-	fmt.Println(example.NewExample("sony", 22))
+	fmt.Println(example.NewExample("sony", 22)) //example call from file inside example/example.go
 
 }
