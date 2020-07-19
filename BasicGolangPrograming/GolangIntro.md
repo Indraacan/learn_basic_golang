@@ -1,4 +1,4 @@
-#Learn Golang
+# Learn Golang
 
 <span style="color:blue">Golang</span> (atau biasa disebut dengan Go) adalah bahasa pemrograman baru yang dikembangkan di Google oleh Robert Griesemer, Rob Pike, dan Ken Thompson pada tahun 2007 dan mulai diperkenalkan ke publik tahun 2009.
 

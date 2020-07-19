@@ -1,4 +1,4 @@
-#Variable
+# Variable
 
 Go adopts two types of variable writing, those that write the data type, and those that don't. Both methods are valid and the purpose is the same, the difference is just the way of writing it.
 
@@ -25,7 +25,7 @@ The ```var``` keyword above is used for variable declarations, for example, can 
 
 The value of the ```firstName``` variable is filled directly when the declaration, different from ```lastName``` whose value is filled after the declaration code line, something like this is allowed on Go
 
-#Use of Functions ```fmt.Printf```
+# Use of Functions ```fmt.Printf```
 
 This function is used to display output in a certain form. It has the same function as the ```fmt.Println ()``` function, only the output structure is defined at the beginning.
 
@@ -44,7 +44,7 @@ The plus sign (+) if placed between strings, the function is to concatenate stri
 
 The ```fmt.Printf ()``` function does not generate a new line at the end of the text, therefore a newline literal,``` \ n```, is used to bring up a new line at the end. This is very different compared to the ```fmt.Println ()``` function which automatically generates a new line at the end.
 
-#Declaration of Variables Without a Data Type
+# Declaration of Variables Without a Data Type
 
 In addition to manifest typing, Go also adopts the concept of type inference, which is a variable declaration method whose data type is determined by the value data type, contradictory when compared to the first method. With this type of method, the var keyword and data type don't need to be written.
 
@@ -55,7 +55,7 @@ lName := "wick"
 fmt.Printf("halo %s %s!\n", firstName, lastName)
 ```
 
-#Multi Variable Declaration
+# Multi Variable Declaration
 
 Go supports the declaration method of many variables simultaneously, the way to write the variables with a comma delimiter (,). For charging the value is allowed simultaneously.
 
@@ -65,7 +65,7 @@ one, two, three = "satu", "dua", "tiga"
 
 ````
 
-#Variabel UnderScore ```_```
+# Variabel UnderScore ```_```
 
 Go has unique rules that are rarely owned by other languages, i.e. none of the variables can be idle. That is, all variables declared must be used. If there are variables that are not used but declared, an error will appear during compilation and the program will not be able to run.
 
@@ -88,6 +88,16 @@ Usually the underscore variable is often used to accommodate the return value of
 
 Please note, that the contents of the underscore variable cannot be displayed. Data that has entered the variable will be lost. Like an underscore variable such as a blackhole, any object that enters into it will be trapped forever in the singularity and will not be able to get out.
 
-#Declaration of Variables Using the ```New``` Keyword
+# Declaration of Variables Using the ```New``` Keyword
 
-    
+The ```new``` keyword is used to create pointer variables with certain data types. The default data value will adjust the data type.
+
+```
+myname := new(string)
+
+fmt.Println(myname)   // 0x20818a220
+fmt.Println(*myname)  // ""
+
+```
+
+The variable name holds data of type pointer string. If the value shown is not the value that appears, but the memory address of that value (in the form of hexadecimal notation). To display the original value, the variable needs to be dereference first, using an asterisk (*).
